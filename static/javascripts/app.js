@@ -60,7 +60,7 @@ function play_recommendation(recommendation) {
         url: base + "video?recommendation=" + recommendation,
         success: function(data) {
             playlist_data = data;
-            $("#player").html("<iframe style=\"width:100%; height:400px;margin:0px;border:0px\" src='https://www.youtube.com/embed/" + data.id + "?rel=0&amp;autoplay=1'></iframe>");
+            $("#player").html("<iframe style=\"width:100%; height:400px;margin:0px;border:0px\" src='https://www.hooktube.com/embed/" + data.id + "?rel=0&amp;autoplay=1'></iframe>");
             $('.notification').show();
             $('#title').html(recommendation);
             if ($('#showYouTubeVideo').is(':checked')) {

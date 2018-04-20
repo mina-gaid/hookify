@@ -61,17 +61,22 @@
 					<div class="col-md-8 mx-auto">
 						<div class="row">
 							<div class="input-group mb-3">
-								<input type="text" id="query" name="query" class="form-control search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
+								<input type="text" id="query" name="query" class="form-control selection-input search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
 								<div class="input-group-append">
 									<button id="findRecommendations" class="form-control btn btn-outline-secondary btn-black btn-block" type="button">Search</button>
 								</div>
 							</div>
 						</div>
 						<div class="row mt-3">
-							<div class="form-check  form-group">
-								<input class="form-check-input form-control " type="checkbox" value="" id="showYouTubeVideo">
-								<label class="form-check-label" for="showYouTubeVideo">Show YouTube Video</label>
-							</div>
+
+
+  <div class="form-check">
+    <label class="form-check-label" for="showYouTubeVideo">
+      <input type="checkbox" class="form-check-input" value="" id="showYouTubeVideo">
+      Show YouTube Video
+    </label>
+  </div>
+
 						</div>
 					</div>
 				</div>
@@ -104,7 +109,6 @@
 		</div>
 
 		<!--- Scripts --->
-		<script src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"></script>
 		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>

@@ -29,6 +29,11 @@
   background: #fff;
 }
 
+.selection-input::selection {
+  background: #222 !important;
+  color: white !important;
+}
+
 /* ----- Buttons ----- */
 
 .btn-black, .btn-black:focus {
