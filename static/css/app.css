@@ -1,0 +1,117 @@
+/* ----- Search component ----- */
+
+/* Search Text */
+
+.heading-lg {
+  font-size: 3rem;
+}
+
+/* Search bar */
+
+.search-bar {
+  display: block;
+  width: 100%;
+  border-radius: 0px;
+  color: #222;
+}
+
+/* ----- Text highlight ----- */
+
+/* Code for Firefox */
+
+::-moz-selection {
+  color: #222;
+  background: #fff;
+}
+
+::selection {
+  color: #222;
+  background: #fff;
+}
+
+/* ----- Buttons ----- */
+
+.btn-black, .btn-black:focus {
+  color: #000 !important;
+  background-color: #fff;
+  box-shadow: none;
+  border-radius: 0px;
+}
+
+.btn-black:hover, .btn-black:active, .btn-black.active {
+  color: #fff !important;
+  border-color: #fff !important;
+  background-color: #000 !important;
+  box-shadow: none !important;
+}
+
+/* ----- Alerts ----- */
+
+.alert-popup {
+  display: none;
+}
+
+/* ----- Miscellaneous ----- */
+
+.bg-white {
+  color: #000;
+  background-color: #fff;
+}
+
+.bg-black {
+  color: #fff;
+  background-color: #222;
+}
+
+.line-separator {
+  width: 6%;
+  height: 5px;
+  background: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.line-separator-2 {
+  height: 1px;
+  background: #717171;
+  border-bottom: solid 3px #000;
+  margin-top: 3em;
+  margin-bottom: 3em
+}
+
+.line-black {
+  border-bottom: 1px solid #000;
+  display: inline-block;
+}
+
+.line-white {
+  border-bottom: 1px solid #fff;
+  display: inline-block;
+}
+
+.dotted-text {
+  border-bottom: 3px dotted #000;
+  cursor: pointer
+}
+
+/* ----- Bootstrap Override ----- */
+
+.container-fluid {
+  padding: 0px;
+}
+
+.form-control {
+  border: 3px solid #fff;
+  border-radius: 0rem;
+}
+
+.table td, .table th {
+  background-color: #fff;
+}
+
+.min-table-cell {
+  min-width: 135px;
+}
+
+.modal-content {
+  border-radius: 0px;
+}
