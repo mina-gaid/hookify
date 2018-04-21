@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request, jsonify
 import spotipy
 import os
+from flask_cors import CORS, cross_origin
 from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.tools import argparser
@@ -19,6 +20,10 @@ app = Flask(__name__)
 
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
 
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
+
+@cross_origin()
 def get_artist(artist_name):
     results = sp.search(q='artist:' + artist_name, type='artist')
     items = results['artists']['items']
@@ -60,12 +65,14 @@ def show_recommendations_for_artist(artist_name):
     return recommendations 
 
 @app.route("/video", methods=['POST'])
+@cross_origin()
 def play_video():
     recommendation = request.args.get('recommendation')
     video = get_youtube_video(recommendation)
     return jsonify(video)
 
 @app.route("/recommendations", methods=['POST'])
+@cross_origin()
 def recommender():
     artist = request.args.get('artist')
     recommendations = show_recommendations_for_artist(artist)
@@ -85,6 +92,7 @@ def method_not_allowed(e):
     }), 405
     
 @app.route("/", methods=['GET'])
+@cross_origin()
 def home():
     return render_template('index.html', title='Home')
 
@@ -92,3 +100,4 @@ def home():
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 33507))
     app.run(debug=True, host='0.0.0.0', port=port)
+
