@@ -1,118 +1,115 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<!-- SEO -->
-		<meta name="subject" CONTENT="Service">
-		<meta name="Description" CONTENT="Discover New Songs from your Favorite Artists">
-		<meta name="Classification" CONTENT="Search & Discover New Songs from your Favorite Artist & Recive Recommendations for more.">
-		<meta name="Keywords" CONTENT="Artify, Music, Songs, Artist, Playlist, Discover, Recommend, Recommendations, New">
-		<meta name="Geography" CONTENT="Europe, North America">
-		<meta name="Language" CONTENT="English">
-		<meta name="distribution" CONTENT="Global">
-		<meta name="Robots" CONTENT="INDEX,FOLLOW">
-		<meta name="country" CONTENT="United States America, Canada, Australia, Ireland, UK">
+<head>
+	<!-- SEO -->
+	<meta name="subject" CONTENT="Service">
+	<meta name="Description" CONTENT="Discover New Songs Based on your Favorite Artists">
+	<meta name="Classification" CONTENT="Search & Discover New Songs from your Favorite Artist & Recive Recommendations for more.">
+	<meta name="Keywords" CONTENT="Hookify, Music, Songs, Artist, Playlist, Discover, Recommend, Recommendations, New">
+	<meta name="Geography" CONTENT="Europe, North America">
+	<meta name="Language" CONTENT="English">
+	<meta name="distribution" CONTENT="Global">
+	<meta name="Robots" CONTENT="INDEX,FOLLOW">
+	<meta name="country" CONTENT="United States of America, Canada, Australia, Ireland, UK">
 
-		<!-- Meta Data -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-		<!-- Favicon -->
-		<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png')}}">
-		<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-		<link rel="apple-touch-icon-precomposed" sizes="250x250" href="favicon.png" />
+	<!-- Favicon -->
+	<link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png')}}">
+	<link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+	<link rel="apple-touch-icon-precomposed" sizes="250x250" href="favicon.png" />
 
-		<!-- Apple Settings -->
-		<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, minimum-scale=0.9, user-scalable=no" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta name="format-detection" content="telephone=no">
+	<!-- Apple Settings -->
+	<meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, minimum-scale=0.9, user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no">
 
-		<!-- Windows tile -->
-		<meta name="msapplication-TileImage" content="favicon.png" />
-		<meta name="msapplication-TileColor" content="#ffffff" />
-		<meta name="application-name" content="Coptic demo-site Website" />
+	<!-- Windows tile -->
+	<meta name="msapplication-TileImage" content="favicon.png" />
+	<meta name="msapplication-TileColor" content="#ffffff" />
+	<meta name="application-name" content="Coptic demo-site Website" />
 
-		<!--- Bootstrap --->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!--- Bootstrap --->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-		<!--- Custom Stylesheet --->
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+	<!--- Custom Stylesheet --->
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
 
-		<!--- Font Awesome --->
-		<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+	<!--- Font Awesome --->
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
-		<!--- Page Title --->
-		<title>{{ title }} | Artify</title>
-	</head>
+	<!--- Page Title --->
+	<title>{{ title }} | Hookify</title>
+</head>
 
-	<body>
-		<div class="bg-black p-5">
-			<div class="container">
-				<!-- Search text -->
-				<div class="row">
-					<div class="col-md-8 offset-md-2 mb-4 pl-0">
-						<h1 class="heading-lg">Artify - Discover New Songs</h1>
-					</div>
+<body>
+	<div class="bg-black p-5">
+		<div class="container">
+			<!-- Search text -->
+			<div class="row">
+				<div class="col-md-8 offset-md-2 mb-4 pl-0">
+					<h1 class="heading-lg selection-inverted">Hookify - Discover New Songs</h1>
 				</div>
-				<!-- Search bar -->
-				<div class="row">
-					<div class="col-md-8 mx-auto">
-						<div class="row">
-							<div class="input-group mb-3">
-								<input type="text" id="query" name="query" class="form-control selection-input search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
-								<div class="input-group-append">
-									<button id="findRecommendations" class="form-control btn btn-outline-secondary btn-black btn-block" type="button">Search</button>
-								</div>
+			</div>
+			<!-- Search bar -->
+			<div class="row">
+				<div class="col-md-8 mx-auto">
+					<div class="row">
+						<div class="input-group mb-3">
+							<input type="text" id="query" name="query" class="form-control search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
+							<div class="input-group-append">
+								<button id="findRecommendations" class="form-control btn btn-outline-secondary btn-black btn-block" type="button"><i class="fas fa-search"></i></button>
 							</div>
 						</div>
-						<div class="row mt-3">
-
-
-  <div class="form-check">
-    <label class="form-check-label" for="showYouTubeVideo">
-      <input type="checkbox" class="form-check-input" value="" id="showYouTubeVideo">
-      Show YouTube Video
-    </label>
-  </div>
-
+					</div>
+					<div class="row mt-3">
+						<div class="form-check">
+							<label class="form-check-label selection-inverted" for="showYouTubeVideo">
+								<input type="checkbox" class="form-check-input" value="" id="showYouTubeVideo">
+								Show YouTube Video
+							</label>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container mt-4">
-			<div class="alert alert-danger alert-dismissible alert-popup error"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<span id='errorMsg'></span>
-			</div>
-			<div class="alert alert-success alert-dismissible notification alert-popup mb-4"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong><i class="fas fa-play ml-2"></i></strong> Playing:
-				<a href='#' id='title'></a>
-			</div>
-			<!-- results -->
-			<div class="row mb-3" id="resultsArea"></div>
+	</div>
+	<div class="container mt-4">
+		<div class="alert alert-danger alert-dismissible alert-popup error"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<span id='errorMsg'></span>
 		</div>
-		<div class="modal" tabindex="-1" role="dialog">
-			<div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content p-3">
-					<div class="modal-header">
-						<h5 class="modal-title"><label id='songTitle'></label></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="fas fa-times"></i></span>
+		<div class="alert alert-success alert-dismissible notification alert-popup mb-4"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+			<strong><i class="fas fa-play ml-2"></i></strong> Playing:
+			<a href='#' id='title'></a>
+		</div>
+		<!-- results -->
+		<div class="row mb-3" id="resultsArea"></div>
+	</div>
+	<div class="modal" tabindex="-1" role="dialog">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content p-3">
+				<div class="modal-header">
+					<h5 class="modal-title"><label id='songTitle'></label></h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="fas fa-times"></i></span>
 					</button>
-					</div>
-					<div class="modal-body">
-						<div id="player"></div>
-					</div>
+				</div>
+				<div class="modal-body">
+					<div id="player"></div>
 				</div>
 			</div>
 		</div>
+	</div>
 
-		<!--- Scripts --->
-		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
-		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
-		<script src="{{ url_for('static', filename='javascripts/app.js') }}"></script>
-	</body>
+	<!--- Scripts --->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="{{ url_for('static', filename='javascripts/app.js') }}"></script>
+</body>
 
 </html>

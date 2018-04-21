@@ -1,9 +1,10 @@
 # music-recommender
-A Flask web application to discover music recommendations for a specific artist!
+A Flask web application to discover music recommendations based on artists.
 
 ## Installation
 
 ``` shell
+$ cd /path/to/Hookify
 $ pip install -r requirements.txt
 $ python recommendations.py
 
@@ -11,18 +12,25 @@ $ python recommendations.py
 
 ## View on Heroku
 
-https://music-recommender1.herokuapp.com
+https://Hookify.herokuapp.com
 
 ## API Documentation
 
 This app uses the [Spotify Recommendations API](https://developer.spotify.com/web-api/get-recommendations/) to retreive track recommendations for a given artist. The [YouTube Data API](https://developers.google.com/youtube/v3/) is used to fetch YouTube video for a given recommendation.
+[HookTube](https://hooktube.com/) is used to redirect Youtbe videos to allow for -
+
+- HTML5 Video player
+- Play videos without giving them views
+- Bypasses country blocks age restrictions
+- Download the videos
+- Keep your data private from Google
 
 ### Get Recommendations
 
 This endpoint returns a list of recommended songs for a given artist.
 
 ```shell
-curl -X POST  https://music-recommender1.herokuapp.com/recommendations?artist=oasis
+curl -X POST  https://Hookify.herokuapp.com/recommendations?artist=oasis
 ```
 
 > The above command returns JSON structured like this:
@@ -63,7 +71,7 @@ curl -X POST  https://music-recommender1.herokuapp.com/recommendations?artist=oa
 This endpoint returns the YouTube url for a given recommendation.
 
 ```shell
-curl -X POST 'https://music-recommender1.herokuapp.com/video?recommendation=The%20Masterplan%20-%20Oasis'
+curl -X POST 'https://Hookify.herokuapp.com/video?recommendation=The%20Masterplan%20-%20Oasis'
 ```
 
 > The above command returns JSON structured like this:
