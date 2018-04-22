@@ -1,4 +1,4 @@
-const base = window.location.href.indexOf("0.0.0.0") > -1 ? "http://0.0.0.0:33507/" : "https://music-recommender1.herokuapp.com/";
+const base = window.location.href.indexOf("0.0.0.0") > -1 ? "http://0.0.0.0:33507/" : "https://hookify.herokuapp.com/";
 
 function moreLike(artistName){
 	$("#resultsArea").html("");
