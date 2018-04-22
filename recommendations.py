@@ -7,12 +7,12 @@ from apiclient.errors import HttpError
 from oauth2client.tools import argparser
 from spotipy.oauth2 import SpotifyClientCredentials
 
-DEVELOPER_KEY = "AIzaSyCbRGmKFPQ-4hUMgJT-BOzAAwO1_NcXIwM"
+DEVELOPER_KEY = "AIzaSyB6CfklsaW7Zw0Z9nZINziaf72su8AlZR0"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
-client_credentials_manager = SpotifyClientCredentials('fbdb0de9be30443e9ee5ed5b254798ca',
-                                                      '28310ff425264b25be082048592d725a')
+client_credentials_manager = SpotifyClientCredentials('9e7ba02c39474b3e84adff441ab7f20c',
+                                                      'b2b326cf13b34b2b89b3c5517c9d14cf')
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager)
 sp.trace = False
 
