@@ -7,7 +7,8 @@ from apiclient.errors import HttpError
 from oauth2client.tools import argparser
 from spotipy.oauth2 import SpotifyClientCredentials
 
-DEVELOPER_KEY = "AIzaSyB6CfklsaW7Zw0Z9nZINziaf72su8AlZR0"
+# DEVELOPER_KEY = "AIzaSyB6CfklsaW7Zw0Z9nZINziaf72su8AlZR0"
+DEVELOPER_KEY = "AIzaSyCbRGmKFPQ-4hUMgJT-BOzAAwO1_NcXIwM"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
