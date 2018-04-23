@@ -22,8 +22,8 @@ This app uses the [Spotify Recommendations API](https://developer.spotify.com/we
 
 - HTML5 Video player
 - Play videos without giving them views
-- Bypasses country blocks age restrictions
-- Download the videos
+- Bypasses country blocks & age restrictions
+- Download videos
 - Keep your data private from Google
 
 ### Get Recommendations
