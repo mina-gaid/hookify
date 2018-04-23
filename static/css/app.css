@@ -65,9 +65,13 @@
 
 /* ----- Miscellaneous ----- */
 
+code {
+  color: #fff !important;
+}
+
 .bg-white {
   color: #222;
-  background-color: #fff;
+  background-color: #fff !important;
 }
 
 .bg-black {
@@ -103,6 +107,10 @@
 .dotted-text {
   border-bottom: 3px dotted #222;
   cursor: pointer
+}
+
+.spacing-bottom {
+  margin-bottom: 20vh;
 }
 
 /* ----- Bootstrap Override ----- */
