@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <!-- SEO -->
+    <meta name="subject" CONTENT="Service">
+    <meta name="Description" CONTENT="Discover New Songs Based on your Favorite Artists">
+    <meta name="Classification" CONTENT="Search & Discover New Songs from your Favorite Artist & Receive Recommendations for more.">
+    <meta name="Keywords" CONTENT="hookify, music, songs, artist, playlist, discover, suggestions, recommend, recommendations, new">
+    <meta name="Geography" CONTENT="Europe, North America">
+    <meta name="Language" CONTENT="English">
+    <meta name="distribution" CONTENT="Global">
+    <meta name="Robots" CONTENT="INDEX,FOLLOW">
+    <meta name="country" CONTENT="United States of America, Canada, Australia, Ireland, UK">
+
+    <!-- Meta Data -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png')}}">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="250x250" href="favicon.png" />
+
+    <!-- Apple Settings -->
+    <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, minimum-scale=0.9, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Windows tile -->
+    <meta name="msapplication-TileImage" content="favicon.png" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="application-name" content="Hookify - Discover New Songs" />
+
+    <!--- Bootstrap --->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--- Custom Stylesheet --->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/app.css') }}">
+
+    <!--- Font Awesome --->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+    <!--- Scripts --->
+    <script src="../static/javascripts/side-nav.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-9134585-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag('js', new Date());
+
+      gtag('config', 'UA-9134585-2');
+    </script>
+
+    <!-- Google Adsense -->
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+        google_ad_client: "ca-pub-8233882474196837",
+        enable_page_level_ads: true
+      });
+    </script>
+
+    <!--- Page Title --->
+    <title>{{ title }}</title>
+  </head>
+
+  <body>
+    <div class="h-100">
+      <!-- The overlay -->
+      <div id="myNav" class="overlay">
+        <!-- Button to close the overlay navigation -->
+        <div class="float-right p-5 m-2">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times fa-sm"></i></a>
+        </div>
+        <!-- Overlay content -->
+        <div class="overlay-content col-md-4 offset-md-4">
+          <div class="m-3"><a href="{{ url_for('home') }}">Home</a></div>
+          <div class="m-3"><a href="{{ url_for('docs') }}">Docs</a></div>
+          <div class="m-3"><a href="{{ url_for('about') }}">About</a></div>
+        </div>
+      </div>
+      <!-- Use any element to open/show the overlay navigation menu -->
+      <div class="float-right p-4 mr-4">
+        <span onclick="openNav()"><i class="fas fa-bars fa-2x btn-menu"></i></span>
+      </div>
+      {% block content %} {% endblock %}
+    </div>
+    <footer class="mt-5">
+      <hr/>
+      <div class="text-center m-5">&copy; {{ now.year }}</div>
+    </footer>
+  </body>
+
+</html>

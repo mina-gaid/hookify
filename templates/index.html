@@ -1,70 +1,62 @@
-<!doctype html>
-<html lang="en">
-
-	{% include 'header.html' %}
-
-	<body>
-		<div class="bg-black"> {% include 'side-nav.html' %}
-			<div class="p-5">
-				<div class="container">
-					<!-- Search text -->
+{% extends 'base.html' %} {% block content %}
+<div class="bg-black">
+	<div class="p-5">
+		<div class="container">
+			<!-- Search text -->
+			<div class="row">
+				<div class="col-md-8 offset-md-2 mb-4 pl-0">
+					<h1 class="heading-lg selection-inverted">Hookify - Discover New Songs</h1>
+				</div>
+			</div>
+			<!-- Search bar -->
+			<div class="row">
+				<div class="col-md-8 mx-auto">
 					<div class="row">
-						<div class="col-md-8 offset-md-2 mb-4 pl-0">
-							<h1 class="heading-lg selection-inverted">Hookify - Discover New Songs</h1>
+						<div class="input-group mb-3">
+							<input type="text" id="query" name="query" class="form-control search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
+							<div class="input-group-append">
+								<button id="findRecommendations" class="form-control btn btn-block" type="button"><i class="fas fa-search"></i></button>
+							</div>
 						</div>
 					</div>
-					<!-- Search bar -->
-					<div class="row">
-						<div class="col-md-8 mx-auto">
-							<div class="row">
-								<div class="input-group mb-3">
-									<input type="text" id="query" name="query" class="form-control search-bar p-3" placeholder="Search by Artist Name" aria-label="Search by artist!" aria-describedby="basic-addon2">
-									<div class="input-group-append">
-										<button id="findRecommendations" class="form-control btn btn-block" type="button"><i class="fas fa-search"></i></button>
-									</div>
-								</div>
-							</div>
-							<div class="row mt-3">
-								<div class="form-check">
-									<label class="form-check-label selection-inverted" for="showYouTubeVideo">
+					<div class="row mt-3">
+						<div class="form-check">
+							<label class="form-check-label selection-inverted" for="showYouTubeVideo">
 								<input type="checkbox" class="form-check-input" value="" id="showYouTubeVideo">
 								Show YouTube Video
 							</label>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="container mt-4">
-			<div class="alert alert-danger alert-dismissible alert-popup error"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<span id='errorMsg'></span>
-			</div>
-			<div class="alert alert-success alert-dismissible notification alert-popup mb-4"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-				<strong><i class="fas fa-play ml-2"></i></strong> Playing:
-				<a href='#' id='title'></a>
-			</div>
-			<!-- results -->
-			<div class="row mb-3" id="resultsArea"></div>
-		</div>
-		<div class="modal" tabindex="-1" role="dialog">
-			<div class="modal-dialog modal-lg" role="document">
-				<div class="modal-content p-3">
-					<div class="modal-header">
-						<h5 class="modal-title"><label id='songTitle'></label></h5>
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="fas fa-times"></i></span>
+	</div>
+</div>
+<div class="container mt-4">
+	<div class="alert alert-danger alert-dismissible alert-popup error"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<span id='errorMsg'></span>
+	</div>
+	<div class="alert alert-success alert-dismissible notification alert-popup mb-4"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+		<strong><i class="fas fa-play ml-2"></i></strong> Playing:
+		<a href='#' id='title'></a>
+	</div>
+	<!-- results -->
+	<div class="row mb-3" id="resultsArea"></div>
+</div>
+<div class="modal" tabindex="-1" role="dialog">
+	<div class="modal-dialog modal-lg" role="document">
+		<div class="modal-content p-3">
+			<div class="modal-header">
+				<h5 class="modal-title"><label id='songTitle'></label></h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true"><i class="fas fa-times"></i></span>
 					</button>
-					</div>
-					<div class="modal-body">
-						<div id="player"></div>
-					</div>
-				</div>
+			</div>
+			<div class="modal-body">
+				<div id="player"></div>
 			</div>
 		</div>
-
-		<!--- Scripts --->
-		<script src="{{ url_for('static', filename='javascripts/app.js') }}"></script>
-	</body>
-
-</html>
+	</div>
+</div>
+<!-- Scripts text -->
+<script src="{{ url_for('static', filename='javascripts/app.js') }}"></script>
+{% endblock %}
