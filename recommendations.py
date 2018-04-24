@@ -110,6 +110,10 @@ def docs():
 def about():
     return render_template('about.html', title='About | Hookify')
 
+@app.route("/robots.txt")
+def robots_dot_txt():
+    return "User-agent: *\nDisallow: /"
+
 @app.context_processor
 def inject_now():
     return {'now': datetime.utcnow()}
