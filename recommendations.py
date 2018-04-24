@@ -6,6 +6,7 @@ from apiclient.discovery import build
 from apiclient.errors import HttpError
 from oauth2client.tools import argparser
 from spotipy.oauth2 import SpotifyClientCredentials
+from datetime import datetime
 
 # DEVELOPER_KEY = "AIzaSyB6CfklsaW7Zw0Z9nZINziaf72su8AlZR0"
 DEVELOPER_KEY = "AIzaSyCbRGmKFPQ-4hUMgJT-BOzAAwO1_NcXIwM"
@@ -99,8 +100,19 @@ def method_not_allowed(e):
 
 @app.route("/", methods=['GET'])
 def home():
-    return render_template('index.html', title='Home')
+    return render_template('index.html', title='Home | Hookify')
 
+@app.route('/docs', methods=['GET', 'POST'])
+def docs():
+    return render_template('docs.html', title='Docs | Hookify')
+
+@app.route('/about', methods=['GET', 'POST'])
+def about():
+    return render_template('about.html', title='About | Hookify')
+
+@app.context_processor
+def inject_now():
+    return {'now': datetime.utcnow()}
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 33507))

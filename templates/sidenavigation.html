@@ -1,0 +1,21 @@
+<!-- The overlay -->
+<div id="myNav" class="overlay">
+
+  <!-- Button to close the overlay navigation -->
+  <div class="float-right p-5 m-2">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times fa-sm"></i></a>
+  </div>
+
+  <!-- Overlay content -->
+  <div class="overlay-content col-md-4 offset-md-4">
+    <div class="m-3"><a href="{{ url_for('home') }}">Home</a></div>
+    <div class="m-3"><a href="{{ url_for('docs') }}">Docs</a></div>
+    <div class="m-3"><a href="{{ url_for('about') }}">About</a></div>
+  </div>
+
+</div>
+
+<!-- Use any element to open/show the overlay navigation menu -->
+<div class="float-right p-4">
+  <span onclick="openNav()"><i class="fas fa-bars fa-2x"></i></span>
+</div>
