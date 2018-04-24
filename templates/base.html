@@ -20,8 +20,8 @@
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon.png')}}">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
-    <link rel="apple-touch-icon-precomposed" sizes="250x250" href="favicon.png" />
+    <link rel="shortcut icon" href="{{ url_for('static', filename='images/favicon.png') }}" type="image/x-icon" />
+    <link rel="apple-touch-icon-precomposed" sizes="250x250" href="{{ url_for('static', filename='images/favicon.png') }}" />
 
     <!-- Apple Settings -->
     <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=1.0, minimum-scale=0.9, user-scalable=no" />
@@ -30,7 +30,7 @@
     <meta name="format-detection" content="telephone=no">
 
     <!-- Windows tile -->
-    <meta name="msapplication-TileImage" content="favicon.png" />
+    <meta name="msapplication-TileImage" content="{{ url_for('static', filename='images/favicon.png') }}" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="application-name" content="Hookify - Discover New Songs" />
 
@@ -44,7 +44,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
 
     <!--- Scripts --->
-    <script src="../static/javascripts/side-nav.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascripts/side-nav.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='javascripts/random-image.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
@@ -84,10 +85,10 @@
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times fa-sm"></i></a>
         </div>
         <!-- Overlay content -->
-        <div class="overlay-content col-md-4 offset-md-4">
-          <div class="m-3"><a href="{{ url_for('home') }}">Home</a></div>
-          <div class="m-3"><a href="{{ url_for('docs') }}">Docs</a></div>
-          <div class="m-3"><a href="{{ url_for('about') }}">About</a></div>
+        <div class="overlay-content offset-md-4 col-md-4">
+          <div><a href="{{ url_for('home') }}">Home</a></div>
+          <div><a href="{{ url_for('docs') }}">Docs</a></div>
+          <div><a href="{{ url_for('about') }}">About</a></div>
         </div>
       </div>
       <!-- Use any element to open/show the overlay navigation menu -->
@@ -96,9 +97,9 @@
       </div>
       {% block content %} {% endblock %}
     </div>
-    <footer class="mt-5">
+    <footer class="bg-black mt-5">
       <hr/>
-      <div class="text-center m-5">&copy; {{ now.year }}</div>
+      <div class="text-center p-5">&copy; {{ now.year }}</div>
     </footer>
   </body>
 
