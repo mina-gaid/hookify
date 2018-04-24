@@ -1,24 +1,18 @@
 <!doctype html>
 <html lang="en">
-
   {% include 'header.html' %}
 
   <body>
-
-    <div class="bg-black"> {% include 'sidenavigation.html' %}
+    <div class="bg-black"> {% include 'side-nav.html' %}
       <div class="p-5">
         <div class="container-fluid">
           <h1 class="text-center heading-lg mt-5 mb-5 selection-inverted">Docs</h1>
         </div>
       </div>
     </div>
-
     <div class="container mt-5 mb-5">
-
       <h2 class="mb-4">API Documentation</h2>
-
       <p class="mb-4">This app uses the <a href="https://developer.spotify.com/web-api/get-recommendations/">Spotify Recommendations API</a> to retreive track recommendations for a given artist. The <a href="https://developers.google.com/youtube/v3/">YouTube Data API</a>        is used to fetch YouTube video for a given recommendation.</p>
-
       <p class="mb-3"><a href="https://hooktube.com/">HookTube</a> is used to redirect Youtbe videos to allow for -</p>
       <ul style="list-style-type:none">
         <li>- HTML5 Video player</li>
@@ -27,19 +21,14 @@
         <li>- Download videos</li>
         <li>- Keep your data private from Google</li>
       </ul>
-
       <h2 class="mt-5 mb-4">Get Recommendations</h2>
-
       <p class="mb-4">This endpoint returns a list of recommended songs for a given artist.</p>
-
       <div class="col-md-8 p-4 bg-black">
         <code class="selection-inverted">
           curl -X POST  https://hookify.herokuapp.com/recommendations?artist=oasis
         </code>
       </div>
-
       <p class="mt-4 mb-4">The above command returns JSON structured like this:</p>
-
       <div class="col-md-8 p-2 bg-black">
         <pre id="json">
           <code class="selection-inverted">
@@ -68,10 +57,8 @@
           </code>
         </pre>
       </div>
-
       <div class="mt-5 mb-5">
         <h2>Query Parameters</h2>
-
         <div class="col-md-6 mt-4">
           <table class="table">
             <thead>
@@ -87,19 +74,14 @@
           </table>
         </div>
       </div>
-
       <h2 class="mb-4">Get YouTube / HookTube Video</h2>
-
       <p class="mb-4">This endpoint returns the YouTube url for a given recommendation.</p>
-
       <div class="col-md-10 p-4 bg-black">
         <code class="selection-inverted">
         curl -X POST 'https://hookify.herokuapp.com/video?recommendation=The%20Masterplan%20-%20Oasis'
       </code>
       </div>
-
       <p class="mt-4 mb-4">The above command returns JSON structured like this:</p>
-
       <div class="col-md-8 p-4 bg-black">
         <pre id="json">
           <code class="selection-inverted">
@@ -116,10 +98,8 @@
           </code>
         </pre>
       </div>
-
       <div class="mt-5 mb-5">
         <h2>Query Parameters</h2>
-
         <div class="col-md-6 mt-4">
           <table class="table">
             <thead>
@@ -135,11 +115,8 @@
           </table>
         </div>
       </div>
-
     </div>
-
     {% include 'footer.html' %}
-
   </body>
 
 </html>
