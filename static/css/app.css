@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 body {
-  height: 100%
+  height: 100%;
+  overflow-x: hidden;
+}
+
+.index-min-height {
+  min-height: 50vh;
 }
 
 /* ----- Search component ----- */
@@ -171,7 +176,7 @@ code {
 .overlay a {
   padding: 10px;
   text-decoration: none;
-  font-size: 40px;
+  font-size: 35px;
   color: #fff;
   display: block;
   /* Display block instead of inline */
