@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
-body {
+html, body {
   height: 100%;
   overflow-x: hidden;
 }
@@ -131,7 +131,7 @@ code {
 /* ----- Side Nav ----- */
 
 .btn-menu {
-  position: absolute;
+  position: relative;
   color: #fff;
 }
 
