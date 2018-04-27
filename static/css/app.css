@@ -4,6 +4,10 @@ html, body {
   overflow-x: hidden !important;
 }
 
+.index-images {
+  margin-top: 8.2vh;
+}
+
 /* ----- Search component ----- */
 
 /* Search Text */
@@ -78,10 +82,6 @@ p, li {
 
 code {
   color: #fff !important;
-}
-
-.index-min-height {
-  min-height: 50vh;
 }
 
 .bg-white {
