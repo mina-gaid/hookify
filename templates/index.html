@@ -43,19 +43,42 @@
 	<!-- results -->
 	<div class="row mb-3" id="resultsArea"></div>
 </div>
-<!-- random image -->
-<div class="container-fluid mt-4 h-50">
-	<div class="row">
-		<div class="col-md-12 no-gutters">
-			<div class="col-md-6 float-left index-images">
-				<script>
-					showImage();
-				</script>
+<!-- welcome -->
+<div class="container-fluid mt-4">
+	<div class="row h-100">
+		<div class="col-md-6 float-left no-gutters d-none d-sm-none d-md-block index-image-1">
+			<img src="{{ url_for('static', filename='images/index-1.png') }}" class="img-fluid" border=0 width="55%" height="70px">
+		</div>
+		<div class="col-md-6 float-right">
+			<div class="mt-4 p-5">
+				<h2>Music You Like, By The Artists You Love <i class="far fa-heart ml-2"></i></h2>
+				<p class="mt-4">Search Your Favourite Artists to Find New Songs that Match Your Style of Music. With Hookify, You'll not only Find New Songs from Your Favorite Artists but Discover New Artists Aswell.</p>
 			</div>
-			<div class="col-md-6 float-right">
-				<div class="row">
-					<h2 class="mt-5 ml-5 p-5">Music You Like, <i class="far fa-heart"></i><br/> By The Artists You Love</h2>
-				</div>
+		</div>
+	</div>
+	<div class="line-separator"></div>
+	<div class="row h-100">
+		<div class="col-md-6 float-left">
+			<div class="mt-4 p-5">
+				<h2>Find That Next Great Song <i class="fas fa-music ml-2"></i></h2>
+				<p class="mt-4">Using Advanced Machine Learning Algorithms, Hookify Compares Data from Millions of People Across Services such as Spotify & YouTube, to find songs that match your Beat.</p>
+				<p>Our Advanced Algorithms Learn how to find the best Song for You Based on The Artists You Love.</p>
+			</div>
+		</div>
+		<div class="col-md-6 float-right text-right no-gutters d-none d-sm-none d-md-block index-image-2">
+			<img src="{{ url_for('static', filename='images/index-2.png') }}" class="img-fluid" border=0 width="55%" height="70px">
+		</div>
+	</div>
+	<div class="line-separator"></div>
+	<div class="row h-100">
+		<div class="col-md-6 float-left no-gutters d-none d-sm-none d-md-block">
+			<img src="{{ url_for('static', filename='images/index-3.png') }}" class="img-fluid" border=0 width="55%" height="70px">
+		</div>
+		<div class="col-md-6 float-right">
+			<div class="mt-4 p-5">
+				<h2>AI Sorting To Match Your Taste <i class="fas fa-sitemap ml-3"></i></h2>
+				<p class="mt-4">With the Help of our Cutting-edge Ranking System, Powered using Cognitive Artificial Intelligence, You'll find the Best Songs suited to You, at the Very Top.</p>
+				<p>All to help You find that Next Great Tune.</p>
 			</div>
 		</div>
 	</div>
