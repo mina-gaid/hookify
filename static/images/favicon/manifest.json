@@ -1,5 +1,6 @@
 {
- "name": "App",
+ "short_name": "Hookify",
+ "name": "Hookify",
  "icons": [
   {
    "src": "\/android-icon-36x36.png",
@@ -37,5 +38,9 @@
    "type": "image\/png",
    "density": "4.0"
   }
- ]
+],
+ "start_url": "https://hookify.herokuapp.com",
+ "background_color": "#ffffff",
+ "display": "standalone",
+ "theme_color": "#343a40"
 }
