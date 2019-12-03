@@ -1,1 +1,1 @@
-web: gunicorn recommendations:app
+web: newrelic-admin run-program gunicorn -w 4 app:app
