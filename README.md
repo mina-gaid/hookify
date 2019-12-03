@@ -1,8 +1,8 @@
-# Music Recommender
+# Hookify - The Music Recommender
 
-Music recommendation client powered using the Spotify Recommendations API.
+Hookify is a Music recommendation client powered using the Spotify Recommendations API.
 
-View on Heroku: [https://music-recommender1.herokuapp.com](https://music-recommender1.herokuapp.com)
+View on Heroku: [https://hookify.herokuapp.com](https://hookify.herokuapp.com)
 
 ## Development
 
