@@ -1,0 +1,11 @@
+# Files -
+*.pyc
+*.pyo
+.idea
+__pycache__
+.DS_Store
+cache/
+
+# Folders -
+node_modules/
+release-builds/

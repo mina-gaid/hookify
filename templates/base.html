@@ -74,7 +74,7 @@
   {# END CONTENT #}
 
   {# START FOOTER #}
-  <footer id="footer" class="bg-black-light text-light mt-5">
+  <footer id="footer" class="bg-dark-light text-light mt-5">
     <div class="d-none d-lg-block">
       <div class="container py-5">
         <div class="col-md-12">
@@ -96,14 +96,9 @@
   {# END FOOTER #}
 
   {# START JS Scripts #}
-  <script>
-    if (typeof module === 'object') {
-      window.module = module;
-      module = undefined;
-    }
-  </script>
 
   {# Main script #}
+  <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 
   {# Bootstrap scripts #}
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
