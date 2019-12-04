@@ -17,6 +17,10 @@ export YOUTUBE_API_KEY=''
 Install the requirements:
 
 ``` bash
+pipenv shell
+```
+Or
+``` bash
 pip install -r requirements.txt
 ```
 

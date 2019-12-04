@@ -43,22 +43,24 @@ a, a:link, a:visited, a:hover, a:active {
   background-color: #222
 }
 
-* {
-  border-radius: 0 !important;
+.btn-dark {
+  background-color: #000;
 }
 
-/* -----
+.btn-outline-dark {
+  color: #000;
+  border-color: #000;
+}
 
-.btn-dark {
-  background-color: #323232;
+.btn-outline-dark:hover {
+  background-color: #000;
+  border-color: #222;
 }
 
 .text-dark {
-  color: #323232;
+  color: #000;
 }
 
 .bg-dark {
-  background-color: #323232;
+  background-color: #000;
 }
-
------ */

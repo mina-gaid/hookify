@@ -10,7 +10,7 @@
           {# Genre Drop-down #}
           <div style='display:none' id="genreDropdown" class="form-group col-xl-8 col-lg-8 col-md-12 col-12">
             <label for="genre">Genre</label>
-            <select id="genreSelector" name="genre" class="form-control">
+            <select id="genreSelector" name="genre" class="form-control form-control-lg">
               {% for genre in genres %}
               <option value="{{ genre }}">{{ genre }}</option>
               {% endfor %}
@@ -19,12 +19,12 @@
           {# Search Input #}
           <div id="searchField" class="form-group col-xl-8 col-lg-8 col-md-12 col-12">
             <label for="searchQuery">Search</label>
-            <input type="text" class="form-control" id="searchQuery" name="artist" placeholder="Enter search query...">
+            <input type="text" class="form-control form-control-lg" id="searchQuery" name="artist" placeholder="Enter search query...">
           </div>
           {# Type Drop-down #}
           <div class="form-group col-xl-4 col-lg-4 col-md-12 col-12">
             <label for="inputState">Type</label>
-            <select id="searchTypeSelector" class="form-control">
+            <select id="searchTypeSelector" class="form-control form-control-lg">
               <option selected value="artist">Artist</option>
               <option value="track">Track</option>
               <option value="genre">Genre</option>
@@ -34,11 +34,11 @@
         <div class="form-row align-items-center">
           {# Clear Button #}
           <div class="form-group col-xl-6 col-lg-6 col-md-6 col-12">
-            <button id="clear" type="reset" class="btn btn-lg btn-block btn-dark">Clear Search</button>
+            <button id="clear" type="reset" class="btn btn-lg btn-block btn-outline-dark">Clear Search</button>
           </div>
           {# Search Button #}
           <div class="form-group col-xl-6 col-lg-6 col-md-6 col-12">
-            <button id="findRecommendations" type="submit" class="btn btn-lg btn-block btn-dark">Search</button>
+            <button id="findRecommendations" type="submit" class="btn btn-lg btn-block btn-outline-dark">Search</button>
           </div>
         </div>
       </form>
@@ -60,34 +60,32 @@
 </div>
 
 {# Results Table #}
-<div class="container-fluid">
-  <div class="offset-xl-1 col-xl-10 col-lg-12 col-md-12 col-12">
-    <div id='resultsArea'> </div>
-  </div>
+<div class="container">
+  <div id='resultsArea'> </div>
 </div>
 
 {# Video #}
 <div class="container">
-  <div style="display: none" id="videoArea">
+  <div style="display:none" id="videoArea">
     <div class="row">
-      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-        {# Video Embed #}
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" id='video' src="" allowfullscreen allowtransparency allow="autoplay"></iframe>
-        </div>
-      </div>
-    </div>
-    <div class="row mt-3">
       {# Back Button #}
       <div class="form-group col-xl-6 col-lg-6 col-md-6 col-12">
-        <button class="btn btn-lg btn-block btn-dark" onclick="displayResults()" href="#">
+        <button class="btn btn-lg btn-block btn-primary" onclick="displayResults()" href="#">
           <i class="fas fa-chevron-left mr-3"></i> Back to results</button>
       </div>
       <div class="form-group col-xl-6 col-lg-6 col-md-6 col-12">
         {# More-like This Button #}
-        <button onclick="findSimilarTracks()" id="moreLikeThis" class="btn btn-lg btn-block btn-dark">
+        <button onclick="findSimilarTracks()" id="moreLikeThis" class="btn btn-lg btn-block btn-danger">
           <i class="fas fa-headphones-alt mr-3"></i> More like this
         </button>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        {# Video Embed #}
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" id='video' loading=lazy frameborder="0" allowfullscreen allowtransparency allow="autoplay"></iframe>
+        </div>
       </div>
     </div>
   </div>

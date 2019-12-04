@@ -63,8 +63,8 @@ const displayRecommendations = recommendations => {
   let tracks = recommendations.tracks
   let content = ""
   const theDiv = document.getElementById("resultsArea")
-  content += "<table class='table table-hover table-bordered'>"
-  content += "<thead class='thead-dark'>"
+  content += "<table class='table table-hover'>"
+  content += "<thead class='thead-light'>"
   content += '<tr>'
   content += '<th scope="col">#</th>'
   content += '<th scope="col">Track</th>'
@@ -177,7 +177,7 @@ const playSong = e => {
       let data = JSON.parse(resp)
       displayVideo()
       loadYoutubeFrame(data.id)
-      displayAlert(`<i class='fas fa-play mr-3'></i> Playing <a href='#' onclick='displayVideo()'>${e}</a>.`, "alert-info")
+      displayAlert(`<i class='fas fa-play mr-3'></i> Playing <a href='#' onclick='displayVideo()'>${e}</a>.`)
       document.getElementById("moreLikeThis").name = e
       if (typeof newrelic == 'object') {
         newrelic.addPageAction('song-played', {

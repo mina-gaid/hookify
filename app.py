@@ -5,8 +5,17 @@ import os
 import json
 import newrelic.agent
 from datetime import datetime
+from flask_cors import CORS
+from flask_htmlmin import HTMLMIN
 
 app = Flask(__name__)
+app.config['MINIFY_HTML'] = True
+CORS(app)
+
+htmlmin = HTMLMIN(app)
+# or you can use HTMLMIN.init_app(app)
+# pass additional parameters to htmlmin
+# HTMLMIN(app, **kwargs)
 
 
 @app.route("/", methods=['GET'])
