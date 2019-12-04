@@ -1,0 +1,6 @@
+applications:
+  - name: hookify
+    memory: 500M
+    disk_quota: 500M
+    route: eu-gb.mybluemix.net
+    command: gunicorn -w 4 app:app

@@ -5,13 +5,14 @@ import os
 import json
 import newrelic.agent
 from datetime import datetime
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from flask_htmlmin import HTMLMIN
 
 app = Flask(__name__)
 app.config['MINIFY_HTML'] = True
-CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
+
+CORS(app)
 
 htmlmin = HTMLMIN(app)
 # or you can use HTMLMIN.init_app(app)
@@ -20,7 +21,6 @@ htmlmin = HTMLMIN(app)
 
 
 @app.route("/", methods=['GET'])
-@cross_origin()
 def home():
     music_genres = load_genres()['genres']
     return render_template('index.html', genres=music_genres)
