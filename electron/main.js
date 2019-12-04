@@ -14,7 +14,9 @@ function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1080,
     height: 800,
-    icon: __dirname + 'icon.icns',
+    minWidth: 470,
+    minHeight: 470,
+    icon: `${__dirname}/assets/icons/mac/icon.icns`
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }

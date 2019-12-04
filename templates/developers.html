@@ -1,11 +1,180 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{# Search #}
 <div class="container">
-  <div class="row">
+  <div class="row mt-5">
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-      Hello world - Devs
+      <h2>API Documentation</h2>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p>This app uses the <a href="https://developer.spotify.com/web-api/get-recommendations/">Spotify Recommendations API</a> to retreive track recommendations for a given artist. The <a href="https://developers.google.com/youtube/v3/">YouTube
+          Data API</a> is used to fetch YouTube video for a given recommendation.</p>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p><a href="https://hooktube.com/">HookTube</a> is used to redirect Youtbe videos to allow for -</p>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col-xl-6 col-lg-8 col-md-10 col-12">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">HTML5 Video player</li>
+        <li class="list-group-item">Play videos without giving them views</li>
+        <li class="list-group-item">Bypasses country blocks & age restrictions</li>
+        <li class="list-group-item">Download videos</li>
+        <li class="list-group-item">Keep your data private from Google</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <h2>Get Recommendations</h2>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p>This endpoint returns a list of recommended songs for a given artist.</p>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col mb-4">
+      <code class="language-json p-3">
+        curl -X POST https://hookify.herokuapp.com/recommendations?artist=oasis
+      </code>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p>The above command returns JSON structured like this:</p>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <pre>
+        <code class="language-json">
+          [
+            "The Masterplan - Oasis",
+            "Club Foot - Kasabian",
+            "Notion - Kings of Leon",
+            "Man of War - Radiohead",
+            "Married With Children - Remastered - Oasis",
+            "Someday - The Strokes",
+            "You Do Something To Me - Paul Weller",
+            "Waterfall - Remastered - The Stone Roses",
+            "This Charming Man - 2011 Remastered Version - The Smiths",
+            "Fireside - Arctic Monkeys",
+            "Slide Away - Remastered - Oasis",
+            "I Promise - Radiohead",
+            "For What It's Worth - Liam Gallagher",
+            "Wasted - Kasabian",
+            "Banquet - Bloc Party",
+            "Rockin' Chair - Oasis",
+            "Maybe Tomorrow - Stereophonics",
+            "Always Ascending - Franz Ferdinand",
+            "505 - Arctic Monkeys",
+            "You Only Live Once - The Strokes"
+          ]
+        </code>
+      </pre>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <h2>Query Parameters</h2>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-8 col-lg-8 col-md-6 col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Parameter</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>artist</td>
+          <td>The artist name</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <h2>Get YouTube / HookTube Video</h2>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p class="mb-4">This endpoint returns the YouTube url for a given recommendation.</p>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col mb-4">
+      <code class="language-json p-3">
+        curl -X POST 'https://hookify.herokuapp.com/video?recommendation=The%20Masterplan%20-%20Oasis'
+      </code>
+    </div>
+  </div>
+  <div class="row mt-4">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <p>The above command returns JSON structured like this:</p>
+    </div>
+  </div>
+  <div class="row mt-2">
+    <div class="col">
+      <pre>
+          <code class="language-json">
+            {
+                "id": "dPPi2D6GK7A",
+                "recommendation": "The Masterplan - Oasis",
+                "thumbnail": {
+                    "height": 360,
+                    "url": "https://i.ytimg.com/vi/dPPi2D6GK7A/hqdefault.jpg",
+                    "width": 480
+                },
+                "youtube_title": "Oasis - The Masterplan"
+            }
+          </code>
+        </pre>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <h2>Query Parameters</h2>
+    </div>
+  </div>
+  <div class="row mt-3">
+    <div class="col-xl-8 col-lg-8 col-md-6 col-12">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Parameter</th>
+            <th scope="col">Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>recommendation</td>
+          <td>The track name</td>
+        </tr>
+      </table>
     </div>
   </div>
 </div>

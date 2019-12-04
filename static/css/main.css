@@ -64,3 +64,19 @@ a, a:link, a:visited, a:hover, a:active {
 .bg-dark {
   background-color: #000;
 }
+
+:not(pre)>code[class*="language-"], pre[class*="language-"] {
+  background: #2d3436
+}
+
+.token.string, .token.char, .token.attr-value, .token.regex, .token.variable {
+  color: #fff
+}
+
+.token.property, .token.class-name, .token.constant, .token.symbol {
+  color: #0984e3
+}
+
+.token.boolean, .token.number, .token.function {
+  color: #ff7675
+}

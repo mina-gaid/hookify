@@ -1,13 +1,97 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{# Search #}
+{# Banner #}
 <div class="container">
   <div class="row">
     <div class="col-xl-12 col-lg-12 col-md-12 col-12">
-      Hello world - About
+      <h2 class="display-4 font-weight-bold">About</h2>
     </div>
   </div>
 </div>
+
+<selection id="aboutWhat">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <h2>What's Hookify?</h2>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p>
+          Hookify is a Web application to discover music recommendations based on your favorite artists. Using advanced Machine Learning Algorithms to find recommendations based on artists, Hookify uses data to help you find songs that match your
+          taste. Recommendations
+          include both songs from the searched artist and others that may match your tast of music. Results are sorted using advanced, self learning, artificial intelligence before being displayed based on ranking.
+        </p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p>
+          Hookify is able to determine the type of music you like with the use of data from services such as Spotify and YouTube. Data that comes from similar search results used by others on those services.
+        </p>
+      </div>
+    </div>
+  </div>
+</selection>
+
+<selection id="aboutPrivacy">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <h2>Privacy</h2>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p><b>Hookify does not collect or store data of it's users or of any kind</b></p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p>The right to Privacy is important. The app is monetized using (Google) ads, not by mining your data. It is for that reason that Hookify uses HookTube instead of YouTube for playing songs.
+          <!--- While the source might be from YouTube, HookTube is used to
+          redirect so to allow for the following - --->
+        </p>
+      </div>
+    </div>
+    <!--- <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+      <ul style="list-style-type:none">
+          <li>- Play videos without giving them views</li>
+          <li>- Bypasses country blocks & age restrictions</li>
+          <li>- Keep your data private from Google</li>
+        </ul>
+      </div>
+    </div> --->
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p>Hookify has no need to learn your location or identity.<br />We simply don't care, and if we wanted to know more about you, we'll do it over Coffee, not an IP address.</p>
+      </div>
+    </div>
+  </div>
+</selection>
+
+<selection id="aboutTakeDown">
+  <div class="container">
+    <div class="row mt-5">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <h2>DMCA TakeDown</h2>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p><b>Hookify does not store or host content of any kind</b></p>
+      </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-xl-12 col-lg-12 col-md-12 col-12">
+        <p>The Hookify service simply uses the Spotify and YouTube APIs to find and direct users to Music of their liking. YouTube video URLs are pulled and pipelined
+          <!--- to HookTube which redirects them before they are shown in a HTML5 Player ---> to user on the Hookify service.
+      </div>
+    </div>
+  </div>
+</selection>
 
 {% endblock %}

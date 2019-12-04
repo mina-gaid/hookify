@@ -24,6 +24,11 @@ def home():
     return render_template('index.html', genres=music_genres)
 
 
+@app.route("/download", methods=['GET'])
+def download():
+    return render_template('download.html')
+
+
 @app.route("/about", methods=['GET'])
 def about():
     return render_template('about.html')
@@ -131,4 +136,4 @@ def inject_now():
 
 if __name__ == '__main__':
     port = int(os.environ.get('PORT', 33507))
-    app.run(debug=False, host='0.0.0.0', port=port)
+    app.run(debug=True, host='0.0.0.0', port=port)
