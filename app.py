@@ -15,6 +15,21 @@ def home():
     return render_template('index.html', genres=music_genres)
 
 
+@app.route("/about", methods=['GET'])
+def about():
+    return render_template('about.html')
+
+
+@app.route("/developers", methods=['GET'])
+def developers():
+    return render_template('developers.html')
+
+
+@app.route("/contact", methods=['GET'])
+def contact():
+    return render_template('contact.html')
+
+
 @app.route("/genres", methods=['POST'])
 def genres():
     music_genres = load_genres()

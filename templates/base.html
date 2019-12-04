@@ -63,8 +63,24 @@
 
   {# START NAVBAR #}
   <div class="no-gutters">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a class="navbar-brand ml-3" href="/"><i class="fas fa-music mr-3"></i> Hookify</a>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand ml-3" href="{{ url_for('home') }}"><i class="fas fa-music mr-3"></i> Hookify</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse text-right" id="navbarToggler">
+        <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+          <li class="nav-item text-dark">
+            <a class="nav-link" href="{{ url_for('about') }}">About</a>
+          </li>
+          <li class="nav-item text-dark">
+            <a class="nav-link" href="{{ url_for('developers') }}">Developers</a>
+          </li>
+          <li class="nav-item text-dark">
+            <a class="nav-link" href="{{ url_for('contact') }}">Contact</a>
+          </li>
+        </ul>
+      </div>
     </nav>
   </div>
   {# END NAVBAR #}
@@ -85,7 +101,7 @@
             <div class="col-md-6 text-left text-muted">
               <small>
                 <span class="mr-4"><span class="mr-2">&copy;</span>{{ now.year }} Hookify</span>
-                <span class="mr-4"><a href="">About</a></span>
+                <span class="mr-4"><a href="{{ url_for('about') }}">About</a></span>
                 <span class="mr-4"><a href="" class="">Privacy</a></span>
                 <span class="mr-4"><a href="" class="">Terms of Use</a></span>
               </small>
