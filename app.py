@@ -3,7 +3,6 @@ from recommender.api import Recommender
 import requests
 import os
 import json
-import newrelic.agent
 from datetime import datetime
 from flask_cors import CORS
 from flask_htmlmin import HTMLMIN
@@ -54,7 +53,6 @@ def genres():
 
 @app.errorhandler(400)
 def bad_request(e):
-    newrelic.agent.record_exception()
     return jsonify({
         'error': "Bad Request"
     })
@@ -62,7 +60,6 @@ def bad_request(e):
 
 @app.errorhandler(404)
 def page_not_found(e):
-    newrelic.agent.record_exception()
     return jsonify({
         'error': "Page not Found"
     })
@@ -70,7 +67,6 @@ def page_not_found(e):
 
 @app.errorhandler(405)
 def method_not_allowed(e):
-    newrelic.agent.record_exception()
     return jsonify({
         'error': "Method not allowed."
     })
@@ -78,7 +74,6 @@ def method_not_allowed(e):
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    newrelic.agent.record_exception()
     return jsonify({
         'error': "Internal server error."
     })
