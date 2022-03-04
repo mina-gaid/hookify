@@ -1,6 +1,6 @@
 applications:
-  - name: hookify
+  - name:
     memory: 500M
     disk_quota: 500M
-    route: eu-gb.mybluemix.net
-    command: gunicorn -w 4 app:app
+    route:
+    command: python manage.py collectstatic --noinput && gunicorn hookify.wsgi:application
