@@ -16,7 +16,9 @@ Please always use `pipenv install` instead of `pip3 install` when adding depende
 
 Also ensure to keep the `requirements.txt` up-to-date by runnging the following command wheneve dependencies are added/removed.
 
-`$ pipenv lock -r > requirements.txt`
+```
+$ pipenv lock -r > requirements.txt
+````
 
 ---
 
@@ -30,33 +32,47 @@ If on macOS, you can use `brew`
 
 To setup homebrew, open the terminal and run the command
 
-`/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
+````
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+````
 
 Then install Python by running the following command
 
-`$ brew install python`
+````
+brew install python
+````
 
 Step 2: Install Pipenv
 
 To setup & use isolated Virtual Environments, install pipenv
 
-`$ pip3 install pipenv`
+````
+pip3 install pipenv
+````
 
 Step 3: Open the terminal & cd into project directory -
 
-`$ cd /path/to/project`
+````
+cd /path/to/project
+````
 
 Step 4: Activate/Create Virtual Environment
 
-`$ pipenv shell`
+````
+pipenv shell
+````
 
 Step 5: Run the following command to install all the dependencies -
 
-`$ pipenv install`
+````
+pipenv install
+````
 
 Alternatively, you can run -
 
-`$ pip3 install -r requirements.txt`
+````
+pip3 install -r requirements.txt
+````
 
 Step 6: Done!
 
@@ -68,17 +84,23 @@ Prerequisite: Ensure you have `Debug` in `app.py` set to `True` during Developme
 
 Step 1: Open the terminal & cd into project directory -
 
-`$ cd /path/to/project`
+````
+cd /path/to/project
+````
 
 Step 2: Run the following command to run the application -
 
 Launch a development server:
 
-`$ python app.py`
+````
+python app.py
+````
 
 Run in production:
 
-`$ gunicorn -w 4 app:app`
+````
+gunicorn -w 4 app:app
+````
 
 Step 3: Copy the URL that will display in the terminal into your browser
 
@@ -114,15 +136,21 @@ Note: Configurations for Docker are located in `Dockerfile` & `docker-compose.ym
 
 Step 1: Open the terminal & cd into project directory -
 
-`$ cd /path/to/project`
+````
+cd /path/to/project
+````
 
 Step 2: Run the following command to build the Docker image -
 
-`$ docker build -t stock-forcasting-dashboard .`
+````
+docker build -t hookify .
+````
 
 Step 3: Run the following command to compose cloud Services -
 
-`$ docker-compose up`
+````
+ocker-compose up
+````
 
 Done!
 
@@ -136,11 +164,15 @@ Note: Configurations for Cloud foundry Deployment, such as domain, are located i
 
 Step 1: Open the terminal & cd into project directory -
 
-`$ cd /path/to/project`
+````
+cd /path/to/project
+````
 
 Step 2: Login to Cloud foundry -
 
-`$ cf login --sso`
+````
+cf login --sso
+````
 
 Step 3: Follow the link, copy the code, paste it into the terminal & execute
 
@@ -148,7 +180,9 @@ Note: Password will not display when pasted or typed into the terminal, it will 
 
 Step 4: Deploy to Cloud foundry -
 
-`$ cf push`
+````
+cf push
+````
 
 Done!
 
