@@ -9,7 +9,7 @@
   "CompanyName": "Hookify Inc",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^13.6.6"
+    "electron": "^22.3.25"
   },
   "dependencies": {
     "asar": "^2.0.1",
